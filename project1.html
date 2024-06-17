@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title - Shubham Tange</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 450px;
+            height: 450px;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            overflow-y: scroll;
+            height: 100%;
+            padding-right: 20px; /* Adjust for scrollbar width */
+        }
+        .slider {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: calc(100% - 40px); /* Adjust for padding */
+            width: 10px;
+            background-color: #ddd;
+            cursor: ns-resize; /* Cursor for vertical resizing */
+            border-radius: 4px;
+            z-index: 100;
+        }
+        .slider-thumb {
+            width: 100%;
+            height: 20px; /* Adjust thumb height */
+            background-color: #4CAF50;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Project Details</h1>
+    </header>
+    <div class="container">
+        <div class="slider" id="slider">
+            <div class="slider-thumb" id="slider-thumb"></div>
+        </div>
+        <div class="content" id="content">
+            <h1>E-Commerce Website Testing</h1>
+            <p><strong>Description:</strong> Developed a comprehensive automation testing suite using Java, Selenium WebDriver, TestNG, Jenkins, and Extent Reports for an e-commerce website. This project includes test cases covering critical functionalities such as product search, add to cart, and checkout processes. Jenkins integration ensures continuous testing and reporting, while Extent Reports provide detailed test execution summaries and metrics.</p>
+            
+            <h2>Details</h2>
+            <ul>
+                <li><strong>Start Date:</strong> March, 2024</li>
+                <li><strong>End Date:</strong> April, 2024</li>
+                <li><strong>Technologies Used:</strong> Java, Selenium, TestNG, Git, Jenkins</li>
+                <li><strong>Contributors:</strong> Shubham Tange</li>
+            </ul>
+            
+            <h2>Objective</h2>
+            <ul>
+                <li>Develop a robust automation testing framework using Java, Selenium WebDriver, TestNG, Jenkins, and Extent Reports.</li>
+                <li>Automate test cases for critical functionalities of an e-commerce website: product search, add to cart, and checkout processes.</li>
+                <li>Ensure efficient and reliable testing to enhance software quality.</li>
+                <li>Accelerate release cycles through automated testing and continuous integration with Jenkins.</li>
+                <li>Provide detailed test execution summaries and metrics using Extent Reports.</li>
+            </ul>
+            
+            <h2>Github Repository</h2>
+            
+            <a href="https://github.com/ShubhamTange/softwaretestingboard" target="_blank">softwaretestingboard ecommerce project</a>        
+
+        </div>
+    </div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        const sliderThumb = document.getElementById('slider-thumb');
+        const content = document.getElementById('content');
+        
+        let isResizing = false;
+        
+        sliderThumb.addEventListener('mousedown', function(e) {
+            isResizing = true;
+            startY = e.clientY;
+        });
+        
+        window.addEventListener('mousemove', function(e) {
+            if (isResizing) {
+                let newHeight = content.clientHeight + (e.clientY - startY);
+                content.style.height = newHeight + 'px';
+                startY = e.clientY;
+            }
+        });
+        
+        window.addEventListener('mouseup', function() {
+            isResizing = false;
+        });
+    </script>
+</body>
+</html>
